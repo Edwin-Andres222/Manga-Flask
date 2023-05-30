@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../static/css/styleindex.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="background-image: url(https://wallpapercave.com/wp/wp8578052.png);">
+    <div class="topnav">
+        <a href="{{url_for('inicio')}}">Inicio</a>
+        <a href="{{url_for('appusuario.login')}}">Iniciar Sesion</a>
+        <a href="{{url_for('appusuario.registro')}}">Registrarse</a>
+        <a href="{{url_for('appusuario.getUsuarios')}}">Usuarios</a>
+        <a href="{{url_for('appproducto.getProducto')}}">Mangas</a>
+        <a href="{{url_for('appproveedor.getProveedor')}}">Editoriales</a>
+        <a href="{{url_for('appventa.getVenta')}}">Ventas</a>
+      </div>
+    </div>
+    <center>
+    <div class="iniciop">
+        <h1 style="font-style: italic;font-family: Arial, Helvetica, sans-serif; background-color: aquamarine;">MERCADO-MANGA</h1>
+        
+        <div style="padding-top: 80px;">
+            <img src="https://2.bp.blogspot.com/-Er8aPGqs7ZQ/Vyv5yJo7-sI/AAAAAAAAABw/E4Fl7OmAe2YRaayR1jewkIIM5T6Zf3q6wCLcB/s1600/Mangas_logo_old.png" alt="" width="500" height="300">
+        </div>
+        
+        <div style="padding-top: 100px;"></div>
+        <div style="color: rgb(137, 209, 21); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+            <p class="font-weight-bold">Edwin Andres Martinez Moreno - 18100199</p>
+            <p class="font-weight-bold">Jesus Eduardo Gutierrez Meza - 19100195</p>
+        </div>
+    </center>
+    
+</body>
+</html>

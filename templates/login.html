@@ -1,0 +1,38 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="../static/css/stylelogin.css">
+{% endblock %}
+{% block title %}
+Usuarios
+{% endblock %}
+
+{% block content %}
+
+<div class="topnav">
+  <center>
+    <a href="{{url_for('inicio')}}">Inicio</a>
+    <a href="{{url_for('appusuario.login')}}">Iniciar Sesion</a>
+    <a href="{{url_for('appusuario.registro')}}">Registrarse</a>
+    <a href="{{url_for('appusuario.getUsuarios')}}">Usuarios</a>
+    <a href="{{url_for('appproducto.getProducto')}}">Mangas</a>
+    <a href="{{url_for('appproveedor.getProveedor')}}">Editoriales</a>
+    <a href="{{url_for('appventa.getVenta')}}">Ventas</a>
+  </center>
+  </div>
+  <center>
+    <h1 class="">{{mensaje}}</h1>
+    <h1 class="">{{pop}}</h1>
+  </center>
+  <center><img src="https://th.bing.com/th/id/R.d95e5b909bae0a62749c8f665d4df3bf?rik=5wxcX2AnLS4yNw&riu=http%3a%2f%2forig12.deviantart.net%2fdbe9%2ff%2f2013%2f172%2f2%2fc%2fmanga_icon_by_jbertrius-d6a22k7.png&ehk=hZlUByE%2bs%2bQDbQd1vAMMUO%2fN6tJqYAw3n%2b1f2SnYMF0%3d&risl=&pid=ImgRaw&r=0" height="100px" width="100px"></center>
+<div class="contenedor">
+    <div class="caja">
+      <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto" style="padding-left: 34%;">
+        {{ wtf.quick_form(forma) }}
+      </div>
+  </div>
+</div>
+
+{% endblock %}

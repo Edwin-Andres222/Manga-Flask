@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styleindex.css">
+    <title>Manga</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="{{url_for('inicio')}}">Inicio</a>
+        <a href="{{url_for('appusuario.login')}}">Iniciar Sesion</a>
+        <a href="{{url_for('appusuario.registro')}}">Registrarse</a>
+        <a href="{{url_for('appusuario.getUsuarios')}}">Usuarios</a>
+        <a href="{{url_for('appproducto.getProducto')}}">Mangas</a>
+        <a href="{{url_for('appproveedor.getProveedor')}}">Editoriales</a>
+        <a href="{{url_for('appventa.getVenta')}}">Ventas</a>
+      </div>
+    <div class="body">
+      <center>
+        <h1>Listado de los Mangas Licenciados Registrados</h1>
+        <div>
+            <a  class="btn btn-info btn-lg" style="color: black;" href="{{ url_for('appproducto.registro') }}">
+                <button type="button" class="btn btn-info btn-lg">Nueva pubicacion</button>
+            </a>
+        </br>
+        </div>
+
+        <div>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Picture</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Imagen</th>
+                        <th>Imagen</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in pros %}
+                    <tr>
+                        <td>{{producto.idProducto}}</td>
+                        <td><img src="data:image/jpg;base64,{{imagen}}" alt="Imagen" width="60" height="80"></td>
+                        <td>{{producto.nombreProducto}}</td>
+                        <td>{{producto.desProducto}}</td>
+                        <td><a href="/producto/imagen//{{producto.idProducto}}">Añadir</a></td>
+                        <td><a href="/producto/detalle//{{producto.idProducto}}">Ver en detalle</a></td>
+                        <td><a href="producto/editar//{{producto.idProducto}}">Editar</a></td>
+                        <td><a href="producto/eliminar//{{producto.idProducto}}">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+      </center>
+    </div>
+    
+</body>
